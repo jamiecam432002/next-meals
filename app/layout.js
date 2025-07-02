@@ -1,4 +1,6 @@
+import MainHeaderBackground from '@/ui/main-header/main-header-background';
 import './globals.css';
+import MainHeader from '@/ui/main-header/main-header';
 
 export const metadata = {
 	title: 'Create Next App',
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				<MainHeader />
+				{children}
+			</body>
 		</html>
 	);
 }
