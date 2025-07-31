@@ -3,12 +3,15 @@ import Link from 'next/link';
 import styles from './meal-item.module.css';
 
 export default function MealItem({ title, slug, image, summary, creator }) {
-	console.log(image);
 	return (
 		<article className={styles.meal}>
 			<header>
 				<div className={styles.image}>
-					<Image src={image} alt={title} fill />
+					<Image
+						src={`https://jamiesportfoliobucket162.s3.amazonaws.com/${image}`}
+						alt={title}
+						fill
+					/>
 				</div>
 				<div className={styles.headerText}>
 					<h2>{title}</h2>
